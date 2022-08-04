@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Layout } from "antd";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React from "react";
+import "./app.css";
+import Filter from "./components/Filters/Filters";
+const { Content } = Layout;
+
+const App = () => (
+  <Layout className="layout">
+    <Content className="site-layout">
+      <div className="site-layout-content">
+        <h1>
+          <strong>Search properties to rent</strong>
+        </h1>
+
+        <Filter />
+      </div>
+    </Content>
+  </Layout>
+);
 
 export default App;
