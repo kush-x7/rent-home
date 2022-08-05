@@ -2,13 +2,6 @@ import { RiMailOpenFill } from "react-icons/ri";
 import Button from "./Button";
 
 const Navbar = () => {
-  const handleList = (event) => {
-    const listItems = document.querySelectorAll("li");
-    console.log(listItems);
-
-    // listItems.map((item) => console.log(item));
-  };
-
   const navItems = ["Rent", "Buy", "Sell", "Manage Property", "Resources"];
   return (
     <>
@@ -28,7 +21,6 @@ const Navbar = () => {
               return (
                 <li
                   key={name}
-                  onClick={handleList}
                   className="pt-1 pb-[5px] px-3 cursor-pointer  hover:bg-light-purple hover:text-primary-purple transition duration-300 ease-out hover:ease-in"
                 >
                   {name}

@@ -1,0 +1,22 @@
+{
+  "house_details": [
+    {
+      "img": "/images/house1.jpg",
+      "price": "100",
+      "houseName": "Palm harbor",
+      "houseAddress": "2699 Green Valley, Highland Lake, FL",
+      "bed": "3 Beds",
+      "bathroom": "2 Bathrooms",
+      "size": "5x7"
+    },
+    {
+      "img": "/images/house1.jpg",
+      "price": "150",
+      "houseName": "Palm harbor",
+      "houseAddress": "2699 Green Valley, Highland Lake, FL",
+      "bed": "3 Beds",
+      "bathroom": "2 Bathrooms",
+      "size": "5x7"
+    }
+  ]
+}

@@ -13,5 +13,5 @@ module.exports = {
       backgroundColor: ["active"],
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [],
 };
