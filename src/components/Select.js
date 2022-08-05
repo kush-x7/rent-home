@@ -1,11 +1,32 @@
-const Select = () => {
+const Select = ({
+  filteredData,
+  setFilteredData,
+  name,
+  allLocation,
+  allPrice,
+  allPropertyType,
+}) => {
+  console.log(allLocation, "sam");
+  const handleSelect = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setFilteredData((prev) => {
+      return {
+        ...prev,
+        [name]: value,
+      };
+    });
+  };
+
   return (
-    <div class="mb-3 ">
+    <div className="mb-3 ">
       <select
-        class="mt-1
+        name={name}
+        onChange={handleSelect}
+        className="mt-1
       block
-      px-3
-      w-[12rem]
+      px-3 
+      sm:w-[12rem] md:w-[11rem] lg:w-[12rem]
       py-1
       text-base
       font-normal
@@ -22,13 +43,18 @@ const Select = () => {
         <option disabled selected hidden>
           Select
         </option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-        <option value="3">Three</option>
-        <option value="3">Three</option>
-        <option value="3">Three</option>
-        <option value="3">Three</option>
+        {allLocation &&
+          allLocation.map((location) => (
+            <option value={location}>{location}</option>
+          ))}
+
+        {allPrice &&
+          allPrice.map((price) => <option value={price}>{price}</option>)}
+
+        {allPropertyType &&
+          allPropertyType.map((propertyName) => (
+            <option value={propertyName}>{propertyName}</option>
+          ))}
       </select>
     </div>
   );

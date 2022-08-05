@@ -5,7 +5,7 @@ const Navbar = () => {
   const navItems = ["Rent", "Buy", "Sell", "Manage Property", "Resources"];
   return (
     <>
-      <nav className="flex items-center justify-between bg-primary-white p-4 px-5">
+      <nav className="flex items-center justify-between  bg-primary-white p-4 px-5">
         <div className="flex gap-9">
           {/* LOGO */}
           <div className="flex items-center">
@@ -16,7 +16,7 @@ const Navbar = () => {
           </div>
 
           {/* List */}
-          <ul className="flex gap-6">
+          <ul className=" gap-6 hidden md:flex">
             {navItems.map((name) => {
               return (
                 <li

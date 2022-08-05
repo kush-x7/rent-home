@@ -1,38 +1,65 @@
 import Button from "./Button";
 import Select from "./Select";
 
-const Filter = () => {
-  const handleChange = (e) => {
-    console.log(e.target.value);
+const Filter = ({ filteredData, setFilteredData, data }) => {
+  const allLocation = data.location;
+  const allPrice = data.price;
+  const allPropertyType = data.propertyType;
+
+  const handleDate = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setFilteredData((prev) => {
+      return {
+        ...prev,
+        [name]: value,
+      };
+    });
   };
   return (
-    <div class="flex justify-between items-center bg-white p-4 z-10">
+    <div className="block md:flex  justify-between items-center flex-wrap bg-white p-4 z-10">
       <div>
         <p>Location</p>
-        <Select />
+        <Select
+          allLocation={allLocation}
+          name={"location"}
+          filteredData={filteredData}
+          setFilteredData={setFilteredData}
+        />
       </div>
       <div>
         <p>When</p>
         <div className="mb-3">
           <input
-            className="mt-1 w-[12rem] py-1 text-base font-normal  text-gray-700 bg-white
+            onChange={handleDate}
+            name="date"
+            className="px-3  mt-1 sm:w-[12rem] md:w-[11rem] lg:w-[12rem] py-1 text-base font-normal  text-gray-700 bg-white
           border border-solid border-gray-300
           rounded
           transition
           ease-in-out  
           focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
             type="date"
-            onChange={handleChange}
           />
         </div>
       </div>
       <div>
         <p>Price</p>
-        <Select />
+        <Select
+          allPrice={allPrice}
+          name={"price"}
+          filteredData={filteredData}
+          setFilteredData={setFilteredData}
+        />
       </div>
       <div>
         <p>Property Type</p>
-        <Select />
+        <Select
+          allPropertyType={allPropertyType}
+          name={"property"}
+          filteredData={filteredData}
+          setFilteredData={setFilteredData}
+        />
       </div>
 
       <div className="flex items-center ">

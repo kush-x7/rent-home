@@ -1,22 +1,106 @@
 {
+  "location": ["Agra", "Delhi", "Pune", "Lucknow"],
+  "price": ["$100 - $200", "$200 - $300"],
+  "propertyType": ["House", "Pg"],
+
   "house_details": [
     {
       "img": "/images/house1.jpg",
-      "price": "100",
       "houseName": "Palm harbor",
       "houseAddress": "2699 Green Valley, Highland Lake, FL",
       "bed": "3 Beds",
       "bathroom": "2 Bathrooms",
-      "size": "5x7"
+      "size": "5x7",
+      "location": "Mumbai",
+      "price": "100",
+      "propertyType": "House",
+      "date": "2022-08-04"
     },
     {
       "img": "/images/house1.jpg",
-      "price": "150",
       "houseName": "Palm harbor",
       "houseAddress": "2699 Green Valley, Highland Lake, FL",
       "bed": "3 Beds",
       "bathroom": "2 Bathrooms",
-      "size": "5x7"
+      "size": "5x7",
+      "location": "Delhi",
+      "price": "150",
+      "propertyType": "Pg",
+      "date": "2022-08-04"
+    },
+
+    {
+      "img": "/images/house1.jpg",
+      "houseName": "Palm harbor",
+      "houseAddress": "2699 Green Valley, Highland Lake, FL",
+      "bed": "3 Beds",
+      "bathroom": "2 Bathrooms",
+      "size": "5x7",
+      "location": "Mumbai",
+      "price": "100",
+      "propertyType": "House",
+      "date": "2022-08-04"
+    },
+    {
+      "img": "/images/house1.jpg",
+      "houseName": "Palm harbor",
+      "houseAddress": "2699 Green Valley, Highland Lake, FL",
+      "bed": "3 Beds",
+      "bathroom": "2 Bathrooms",
+      "size": "5x7",
+      "location": "Delhi",
+      "price": "150",
+      "propertyType": "Pg",
+      "date": "2022-08-04"
+    },
+    {
+      "img": "/images/house1.jpg",
+      "houseName": "Palm harbor",
+      "houseAddress": "2699 Green Valley, Highland Lake, FL",
+      "bed": "3 Beds",
+      "bathroom": "2 Bathrooms",
+      "size": "5x7",
+      "location": "Mumbai",
+      "price": "100",
+      "propertyType": "House",
+      "date": "2022-08-04"
+    },
+    {
+      "img": "/images/house1.jpg",
+      "houseName": "Palm harbor",
+      "houseAddress": "2699 Green Valley, Highland Lake, FL",
+      "bed": "3 Beds",
+      "bathroom": "2 Bathrooms",
+      "size": "5x7",
+      "location": "Delhi",
+      "price": "150",
+      "propertyType": "Pg",
+      "date": "2022-08-04"
+    },
+
+    {
+      "img": "/images/house1.jpg",
+      "houseName": "Palm harbor",
+      "houseAddress": "2699 Green Valley, Highland Lake, FL",
+      "bed": "3 Beds",
+      "bathroom": "2 Bathrooms",
+      "size": "5x7",
+      "location": "Mumbai",
+      "price": "100",
+      "propertyType": "House",
+      "date": "2022-08-04"
+    },
+    {
+      "img": "/images/house1.jpg",
+      "houseName": "Palm harbor",
+      "houseAddress": "2699 Green Valley, Highland Lake, FL",
+      "bed": "3 Beds",
+      "bathroom": "2 Bathrooms",
+      "size": "5x7",
+      "location": "Delhi",
+      "price": "150",
+      "propertyType": "Pg",
+      "date": "2022-08-04"
     }
   ]
 }
