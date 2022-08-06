@@ -5,8 +5,8 @@ const Select = ({
   allLocation,
   allPrice,
   allPropertyType,
+  allMonth,
 }) => {
-  console.log(allLocation, "sam");
   const handleSelect = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -35,25 +35,40 @@ const Select = ({
       border border-solid border-gray-300
       rounded
       transition
-      ease-in-out
+      ease-in-out 
     
       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
         aria-label="Default select example"
       >
-        <option disabled selected hidden>
+        <option disabled hidden selected>
           Select
         </option>
         {allLocation &&
           allLocation.map((location) => (
-            <option value={location}>{location}</option>
+            <option key={location} value={location}>
+              {location}
+            </option>
           ))}
 
         {allPrice &&
-          allPrice.map((price) => <option value={price}>{price}</option>)}
+          allPrice.map((price) => (
+            <option key={price} value={price}>
+              {price}
+            </option>
+          ))}
 
         {allPropertyType &&
           allPropertyType.map((propertyName) => (
-            <option value={propertyName}>{propertyName}</option>
+            <option key={propertyName} value={propertyName}>
+              {propertyName}
+            </option>
+          ))}
+
+        {allMonth &&
+          allMonth.map((month) => (
+            <option key={month} value={month}>
+              {month}
+            </option>
           ))}
       </select>
     </div>

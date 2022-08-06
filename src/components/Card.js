@@ -3,7 +3,6 @@ import { MdOutlineKingBed } from "react-icons/md";
 import { TbBath, TbResize } from "react-icons/tb";
 
 const Card = ({ data }) => {
-  console.log(data, "kush");
   return (
     <div className="max-h-[450px]  bg-white rounded-md">
       {/* Image */}

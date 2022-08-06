@@ -1,20 +1,30 @@
+import { useState } from "react";
 import Button from "./Button";
 import Select from "./Select";
 
-const Filter = ({ filteredData, setFilteredData, data }) => {
+const Filter = ({ data, setShowProperty }) => {
   const allLocation = data.location;
   const allPrice = data.price;
   const allPropertyType = data.propertyType;
+  const allMonth = data.month;
 
-  const handleDate = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setFilteredData((prev) => {
-      return {
-        ...prev,
-        [name]: value,
-      };
+  const [filteredData, setFilteredData] = useState({
+    // location: undefined,
+    // property: undefined,
+    // price: undefined,
+    // date: undefined,
+  });
+
+  const handleSearch = () => {
+    let newData = data.house_details.filter((item) => {
+      for (let key in filteredData) {
+        if (filteredData[key] === undefined || filteredData[key] !== item[key])
+          return false;
+      }
+      return true;
     });
+
+    setShowProperty(newData);
   };
   return (
     <div className="block md:flex  justify-between items-center flex-wrap bg-white p-4 z-10">
@@ -30,16 +40,11 @@ const Filter = ({ filteredData, setFilteredData, data }) => {
       <div>
         <p>When</p>
         <div className="mb-3">
-          <input
-            onChange={handleDate}
-            name="date"
-            className="px-3  mt-1 sm:w-[12rem] md:w-[11rem] lg:w-[12rem] py-1 text-base font-normal  text-gray-700 bg-white
-          border border-solid border-gray-300
-          rounded
-          transition
-          ease-in-out  
-          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            type="date"
+          <Select
+            allMonth={allMonth}
+            name={"month"}
+            filteredData={filteredData}
+            setFilteredData={setFilteredData}
           />
         </div>
       </div>
@@ -56,7 +61,7 @@ const Filter = ({ filteredData, setFilteredData, data }) => {
         <p>Property Type</p>
         <Select
           allPropertyType={allPropertyType}
-          name={"property"}
+          name={"propertyType"}
           filteredData={filteredData}
           setFilteredData={setFilteredData}
         />
@@ -64,7 +69,9 @@ const Filter = ({ filteredData, setFilteredData, data }) => {
 
       <div className="flex items-center ">
         <div className="mt-4">
-          <Button fillBackground>Search</Button>
+          <Button handleSearch={handleSearch} fillBackground>
+            Search
+          </Button>
         </div>
       </div>
     </div>
